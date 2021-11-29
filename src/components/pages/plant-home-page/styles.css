@@ -1,0 +1,14 @@
+.plants-page {
+    margin: 40px;
+}
+
+.plants-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.plants-title {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
