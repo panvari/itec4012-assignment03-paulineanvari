@@ -4,6 +4,7 @@ import {
 } from "react-router-dom";
 import {useContext, useEffect, useState} from "react";
 import PlantContext from "../../../context/plant-context";
+import {Button} from '../../button';
 
 export const PlantPage = (props) => {
     const {id} = useParams();
@@ -40,6 +41,7 @@ export const PlantPage = (props) => {
                             <p className="water">{plant.water?.stringValue}</p>
                         </li>
                     </ul>
+                    <Button text="Add to Cart" type="primary" isDisabled={false}/>
                 </div>
             </div>
         )

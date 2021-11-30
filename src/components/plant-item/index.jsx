@@ -2,6 +2,7 @@ import './styles.css';
 import {
     Link
 } from 'react-router-dom';
+import {Button} from '../button';
 
 export const PlantItem  = (props) => {
     const {image, name, price, description, id} = props;
@@ -16,6 +17,7 @@ export const PlantItem  = (props) => {
             </Link>
             <p className="plant-description">{description}</p>
             <p className="plant-price">${price}</p>
+            <Button text="Add to Cart" type="primary" isDisabled={false}/>
         </div>
     )
 }
