@@ -11,12 +11,15 @@ import { PlantPage } from './components/pages/plant-page';
 function App() {
   return (
     <Router>
-    <Navbar />
+      {/*include nav bar component on all pages*/}
+    <Navbar/>
     <Switch>
+      {/*set route for homepage and use homepage component*/}
       <Route exact path="/">
         <PlantHomePage />
       </Route>
-      <Route path="/plant/:id">
+      {/*set route for details page, using the plant's id, and use plant details component*/}
+      <Route path="/plant/:id"> 
         <PlantPage/>
       </Route>
     </Switch>

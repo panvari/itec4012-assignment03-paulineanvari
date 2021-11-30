@@ -5,13 +5,16 @@ import {
 import { RiPlantFill } from 'react-icons/ri';
 
 export const Navbar = () => {
+    //return nav bar with icon and shop title
     return (
         <nav className="navbar">
             <ul className="navbar-list">
                 <li>
-                <RiPlantFill className="shop-icon" style={{fontSize: "35px"}} />
+                    {/*define shop icon*/}
+                    <RiPlantFill className="shop-icon" style={{fontSize: "35px"}} />
                 </li>
                 <li>
+                    {/*define shop title*/}
                     <NavLink exact={true} activeClassName="nav-selected" to="/">Pauline's Plant Shop</NavLink>
                 </li>
             </ul>

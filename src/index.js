@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import {PlantContextProvider} from './context/plant-context';
 
 ReactDOM.render(
+  //Wrap app in context provider
   <PlantContextProvider>
     <App />
   </PlantContextProvider>,
