@@ -67,7 +67,7 @@ export const PlantHomePage = () => {
         }
         {
           //define the loading state
-          loading && <p>Loading plants...</p>
+          loading && <div class="loader"></div>
         }
       </div>
     </div>
