@@ -1,0 +1,49 @@
+.plant-page {
+    width: 100%;
+    margin: 40px;
+}
+
+.image-container {
+    float: left;
+    margin-bottom: 40px;
+}
+
+.text-container {
+    width: 50%;
+    float: left;
+    margin-left: 40px;
+}
+
+.image {
+    width: 400px;
+    border-radius: 15px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.description {
+    color: rgb(73, 73, 73);
+    padding: 5px;
+    font-size: 20px;
+}
+
+.description-long {
+    color: rgb(73, 73, 73);
+    padding: 5px;
+    font-size: 12px;
+}
+
+.care {
+    color: rgb(73, 73, 73);
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+.care-list {
+    margin-bottom: 40px;
+}

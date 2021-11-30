@@ -1,11 +1,14 @@
 import "./styles.css";
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useContext} from 'react';
 import {PlantItem} from '../../plant-item';
+import PlantContext from "../../../context/plant-context";
 
 export const PlantHomePage = () => {
 
   const [plants, setPlants] = useState([]);
-  //const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
+
+  const globalState = useContext(PlantContext);
 
   useEffect(
     () => {
@@ -25,13 +28,13 @@ export const PlantHomePage = () => {
 
       console.log(formattedData);
 
-      setPlants(formattedData);
-      //globalState.initializePlants(formattedData);    
-      //setLoading(false);  
+      setPlants(formattedData); 
+      globalState.initializePlants(formattedData); 
+      setLoading(false);  
 
     } catch (err) {
       console.log (err);
-      //setLoading(false);
+      setLoading(false);
     }
   }
 
@@ -42,6 +45,7 @@ export const PlantHomePage = () => {
         {
           plants.map((plant) => (
             <PlantItem 
+              key={plant.id.stringValue}
               image={plant.image.stringValue} 
               name={plant.plant.stringValue} 
               description={plant.description.stringValue} 
@@ -49,6 +53,9 @@ export const PlantHomePage = () => {
               id={plant.id.stringValue}>
             </PlantItem>
           ))
+        }
+        {
+          loading && <p>Loading plants...</p>
         }
       </div>
     </div>

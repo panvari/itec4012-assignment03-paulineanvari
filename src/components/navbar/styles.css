@@ -7,19 +7,19 @@
 
   .navbar {
     background: rgb(118, 184, 162);
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 
   .navbar li {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: .50rem;
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
 
   .navbar a {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: 450;
+    text-transform: uppercase;
   }
 
   .navbar a.nav-selected {
@@ -34,6 +34,7 @@
   .shop-icon {
     color: rgb(255, 255, 255);
   }
+
   @media only screen and (min-width: 600px) {
     .navbar ul {
       display: flex;

@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import { Navbar } from './components/navbar';
 import { PlantHomePage } from './components/pages/plant-home-page';
+import { PlantPage } from './components/pages/plant-page';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
     <Switch>
       <Route exact path="/">
         <PlantHomePage />
+      </Route>
+      <Route path="/plant/:id">
+        <PlantPage/>
       </Route>
     </Switch>
   </Router>

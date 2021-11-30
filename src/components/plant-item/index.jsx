@@ -1,5 +1,4 @@
 import './styles.css';
-//import {Button} from '../button';
 import {
     Link
 } from 'react-router-dom';
@@ -9,8 +8,12 @@ export const PlantItem  = (props) => {
 
     return (
         <div className="plant">
-            <img className="plant-photo" src={image} alt={name + "photo"}/>
-            <h1 className="plant-name">{name}</h1>
+            <Link to={`/plant/${id}`}>
+                <img className="plant-photo" src={image} alt={name + "photo"}/>
+            </Link>
+            <Link to={`/plant/${id}`}>
+                <h1 className="plant-name">{name}</h1>
+            </Link>
             <p className="plant-description">{description}</p>
             <p className="plant-price">${price}</p>
         </div>
